@@ -1,0 +1,23 @@
+CREATE TABLE books(
+    isbn BIGINT UNSIGNED NOT NULL,
+    NAME VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    image_path VARCHAR(1000) NOT NULL,
+    hardcover_price DECIMAL(10, 2) UNSIGNED NOT NULL,
+    paperback_price DECIMAL(10, 2) UNSIGNED NOT NULL,
+    kindle_price DECIMAL(10, 2) UNSIGNED NOT NULL,
+    genre VARCHAR(255) NOT NULL,
+    overview VARCHAR(255) NOT NULL,
+    publish_date DATE NOT NULL,
+    page_number INT NOT NULL,
+    used BOOLEAN NOT NULL,
+    PRIMARY KEY(isbn)
+);
+
+CREATE TABLE reviews(
+    id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    book_id BIGINT UNSIGNED NOT NULL,
+    COMMENT VARCHAR(255) NOT NULL,
+    rating INT NOT NULL,
+    CONSTRAINT fk_book_id FOREIGN KEY(book_id) REFERENCES books(isbn)
+);
