@@ -7,29 +7,38 @@
         <script src="js/react.js"></script>
         <script src="js/react-dom.js"></script>
         <script src="js/navbar.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Style/main.css" />
+        <link rel="stylesheet" type="text/css" href="./Style/nav-bar.css" />
     </head>
-    <body>
-        <div id="logo"></div>
-        <script type = "text/javascript">
-            /* React code */
-            let h1 = React.createElement('h1',null, "Books Aren't Dead!");
-        </script>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="new-releases.html">New Releases</a>
-            <a href="newsletter.html">Newsletter</a>
-            <a href="best-sellers.html">Best Sellers</a>
-        </nav>    
-        
-        <form action="login.php" method="post">
+    <header>
+        <h1>Books Aren't Dead!</h1>
+        <form id="login" action="login.php" method="post">
             <label>username: </label>
             <input type="text" name="username"><br>
             <label>password: </label>
             <input type="password" name="password"><br>
             <br>
             <input type="submit" value="Login">
+            <button type="button" id="sign-up">Sign-up</button> 
         </form>
-        <button type="button" id="sign-up">Sign-up</button> 
+        
+    </header>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="new-releases.html">New Releases</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="best-sellers.html">Best Sellers</a></li>
+            </ul>
+         </nav>  
+
+        <div id="logo"></div>
+        <script type = "text/javascript">
+            /* React code */
+            let h1 = React.createElement('h1',null, "Books Aren't Dead!");
+        </script>
+        
         
     </body>
 </html>
