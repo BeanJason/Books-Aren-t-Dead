@@ -6,7 +6,6 @@
         <link rel = "stylesheet" href="Style/main.css">
         <script src="js/react.js"></script>
         <script src="js/react-dom.js"></script>
-        <script src="js/navbar.js"></script>
     </head>
     <body>
         <div id="logo"></div>
@@ -21,15 +20,19 @@
             <a href="best-sellers.html">Best Sellers</a>
         </nav>    
         
-        <form action="login.php" method="post">
-            <label>username: </label>
-            <input type="text" name="username"><br>
-            <label>password: </label>
-            <input type="password" name="password"><br>
+        <form action="addUser.php" method="post">
+            <label for="userId">userId: </label>
+            <input type="text" id="userId" name="userId"><br>
+            <label for="userName">username: </label>
+            <input type="text" is="userName" name="userName"><br>
+            <label for="user_Password">password: </label>
+            <input type="text" id="user_Password" name="user_Password"><br>
+            <label for="user_Address">address: </label>
+            <input type="text" id="user_Address" name="user_Address"><br>
+            <label for="user_zipcode">zipcode: </label>
+            <input type="text" id="user_zipcode" name="user_zipcode"><br>
             <br>
-            <input type="submit" value="Login">
+            <input type="submit" value="submit">
         </form>
-        <button type="button" id="sign-up">Sign-up</button> 
-        
     </body>
 </html>
