@@ -2,10 +2,99 @@ import Book from '../components/Book';
 import './BooksPage.css';
 
 export default function BooksPage() {
-	const url = "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781523502196_p0_v10%5D&call=url%5Bfile:common/decodeProduct.chain%5D";
-	const url2 = "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9780358086765_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D";
-	const url3 = "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9780593465066_p0_v5%5D&call=url%5Bfile:common/decodeProduct.chain%5D";
-	const url4 = "https://images-na.ssl-images-amazon.com/images/I/51RY7+RDt+L._SX325_BO1,204,203,200_.jpg"
+	const books = [
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51KvAoff+ZL._SX407_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 2
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/41Xi50NeleL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 3
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51RY7+RDt+L._SX325_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 1
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51uf17CjFMS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 4
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51KvAoff+ZL._SX407_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 5
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/41Xi50NeleL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 3
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51RY7+RDt+L._SX325_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 3
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51uf17CjFMS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 4
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51KvAoff+ZL._SX407_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 3
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/41Xi50NeleL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 2.1
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51RY7+RDt+L._SX325_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 3.7
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51uf17CjFMS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 4.5
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51KvAoff+ZL._SX407_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 5
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/41Xi50NeleL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 1.2
+		},
+		{
+			url: "https://images-na.ssl-images-amazon.com/images/I/51RY7+RDt+L._SX325_BO1,204,203,200_.jpg",
+			title: "Book1",
+			author: "Author1",
+			rating: 5
+		}
+	];
+
 	return (
 		<div className="books-page">
 			<div className="genre-picker">
@@ -21,16 +110,9 @@ export default function BooksPage() {
 			</div>
 
 			<div className="book-gallery">
-				<Book imgUrl={url} title="Book Title" author="Author" rating={1} />
-				<Book imgUrl={url2} title="Book Title" author="Author" rating={3} />
-				<Book imgUrl={url3} title="Book Title" author="Author" rating={2} />
-				<Book imgUrl={url4} title="Book Title" author="Author" rating={1} />
-				<Book imgUrl={url} title="Book Title" author="Author" rating={2} />
-				<Book imgUrl={url2} title="Book Title" author="Author" rating={3} />
-				<Book imgUrl={url} title="Book Title" author="Author" rating={4} />
-				<Book imgUrl={url3} title="Book Title" author="Author" rating={5} />
-				<Book imgUrl={url4} title="Book Title" author="Author" rating={3} />
-				<Book imgUrl={url2} title="Book Title" author="Author" rating={2} />
+				{
+					books.map((book) => <Book imgUrl={book.url} title={book.title} author={book.author} rating={book.rating} />)
+				}
 			</div>
 		</div>
 	);
