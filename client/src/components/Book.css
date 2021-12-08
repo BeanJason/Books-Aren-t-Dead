@@ -1,0 +1,14 @@
+.book {
+	display: inline-block;
+	margin-right: 40px;
+	margin-top: 40px;
+}
+
+.book-cover {
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.book-text p {
+	margin: 0;
+}
