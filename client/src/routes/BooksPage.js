@@ -9,17 +9,17 @@ export default function BooksPage() {
 	return (
 		<div className="books-page">
 			<div className="genre-picker">
-				<form>
-					<label for="genre">Genre: </label>
-					<select name="genre">
-						<option value="fiction">Fiction</option>
-						<option value="non-fiction">Non-Fiction</option>
-						<option value="mystery">Mystery</option>
-						<option value="fantasy">Fantasy</option>
-					</select>
-				</form>
-
+				<h1>Genres</h1>
+				<p>Arts and Photos</p>
+				<p>Business</p>
+				<p>Romance</p>
+				<p>Law</p>
+				<p>History</p>
+				<p>Fiction</p>
+				<p>Non-Fiction</p>
+				<p>Thriller</p>
 			</div>
+
 			<div className="book-gallery">
 				<Book imgUrl={url} title="Book Title" author="Author" rating={1} />
 				<Book imgUrl={url2} title="Book Title" author="Author" rating={3} />

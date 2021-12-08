@@ -1,3 +1,8 @@
-.genre-picker {
-	margin-top: 20px;
+.genre-picker p:hover {
+	font-weight: bold;
+}
+
+.books-page {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
 }
