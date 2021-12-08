@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <title>Books Aren't Dead.com</title>
@@ -35,8 +35,15 @@
                 <li><a href="newsletter.html">Newsletter</a></li>
                 <li><a href="best-sellers.html">Best Sellers</a></li>
             </ul>
-         </nav>    
-        
+         </nav>     -->
+         <!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+</head>
+<body>
+         <?php include "./templates/header.html" ?>
+         <?php include "./templates/body.html"?>
+
         <form action="addUser.php" method="post">
             <label for="userId">userId: </label>
             <input type="text" id="userId" name="userId"><br>

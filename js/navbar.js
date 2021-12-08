@@ -7,5 +7,5 @@ function main(){
 
 function loadStartUp(){
     console.log("button clicked");
-    window.location='sign-up.html';
+    window.location='sign-up.php';
 }
