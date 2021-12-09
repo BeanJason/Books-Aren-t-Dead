@@ -4,11 +4,12 @@
 	margin-top: 40px;
 }
 
-.book-cover {
+.book-cover, .book-text {
 	max-height: 200px;
 	max-width: 200px;
 }
 
 .book-text p {
 	margin: 0;
+	font-size: 10px;
 }

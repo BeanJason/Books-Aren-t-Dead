@@ -1,9 +1,8 @@
 <?php
-	// $title = $_GET['title'];
+	header('Access-Control-Allow-Origin: *');
+	header('Access-Control-Allow-Methods: GET, POST');
+	header("Access-Control-Allow-Headers: X-Requested-With");
 
-	// $data = array('a' => 'apple', 'b' => 'banana', 'c' => 'catnip');
-	// header('Content-type: text/javascript');
-	// echo json_encode($data);
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
@@ -15,8 +14,14 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-	
+
 	$sql = "SELECT * FROM books";
+	
+	if (!empty($_GET)) {
+		$genre = $_GET["genre"];
+		$sql = "SELECT * FROM books WHERE genre = '$genre'";
+	}
+
 	$result = $conn->query($sql);
 
 	$rows = array();
@@ -26,9 +31,9 @@
 		while($row = $result->fetch_assoc()) {
 			$rows[] = $row;
 		}
+		print json_encode($rows);
 	} else {
-		echo "0 results";
+		print json_encode($rows);
 	}
-	print json_encode($rows);
 	$conn->close();
 ?>
