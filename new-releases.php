@@ -7,19 +7,21 @@
         <script src="js/react.js"></script>
         <script src="js/react-dom.js"></script>
     </head>
+    <?php include "./templates/header.html" ?>
     <body>
+         <?php include "./templates/body.html"?>
         <div id="logo"> </div>
         <script type = "text/javascript">
             /* React code */
             let h1 = React.createElement('h1',null, "Books Aren't Dead!");
         </script>
-        <nav>
+        <!-- <nav>
             <a href="index.html">Home</a>
             <a href="new-releases.html">New Releases</a>
             <a href="newsletter.html">Newsletter</a>
             <a href="best-sellers.html">Best Sellers</a>
             <a href="recommend.html">Recommendations</a>
-        </nav>    
+        </nav>     -->
         
         <form action="processes.php" method="post">
             <label>username: </label>
