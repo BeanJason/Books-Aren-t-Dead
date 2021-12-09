@@ -24,6 +24,7 @@
         /* React code */
         let h1 = React.createElement('h1', null, "Books Aren't Dead!");
     </script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
     <br><br>
 
@@ -44,6 +45,9 @@
 
     <input type="text" placeholder="Title, Author ,ISBN">
     
+    <button class="cartbtn">Shopping Cart <i class="fas fa-cart-arrow-down"></i></button>
+
+
 </body>
 
 </html>
