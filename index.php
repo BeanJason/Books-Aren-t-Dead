@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./Style/nav-bar.css" />
 </head>
 <header>
-    <?php include "./templates/header.html" ?>
+    <?php include "./templates/header.php" ?>
 
 </header>
 

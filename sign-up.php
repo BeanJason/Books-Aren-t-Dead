@@ -3,7 +3,7 @@
     <head>
 </head>
 <body>
-         <?php include "./templates/header.html" ?>
+         <?php include "./templates/header.php" ?>
          <?php include "./templates/body.html"?>
 
          <h1>Sign Up</h1>

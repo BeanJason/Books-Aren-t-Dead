@@ -1,29 +1,35 @@
-<?php
-    require_once('database.php');
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+</head>
+<body>
+         <?php include "./templates/header.php" ?>
+         <?php include "./templates/body.html"?>
 
-    $username = filter_input(INPUT_POST, 'userName');
-    $passwords = filter_input(INPUT_POST, 'user_Password');
+         <br>
+         <h1>Log in</h1>
+         <form id="login" action="logUserIn.php" method="post">
+            <label for="userName">username: </label>
+            <input type="text" is="userName" name="userName"><br>
+            <label for="user_Password">password: </label>
+            <input type="password" id="user_Password" name="user_Password"><br>
+            <br>
+            <input type="submit" value="Login">
+        </form>
 
-    $queryUsers = "SELECT * FROM user WHERE username=:userName AND passwords=:user_Password";
+        <?php
+            if(isset($_GET["error"])){
+                if($_GET["error"] == "notFound"){
+                    echo "<p>Error: username / password doesn't match </p>";
+                }
+            }
+            else if(isset($_GET["noError"])){
+                echo "<p>Sucessfully logged in!</p>";
+            }
 
-    $execStatement = $db->prepare($queryUsers);
-    $execStatement->bindValue(':userName', $username);
-    $execStatement->bindValue(':user_Password', $passwords);
+        ?>
+        
+    </body>
+</html>
 
-
-    $execStatement->execute();
-
-    $userList = $execStatement->fetchAll();
-    $userRowCount = $execStatement->rowCount();
-    $execStatement->closeCursor();
-
-    if($userRowCount == 0)
-    {
-        echo 'Username or password does not match';
-    }
-    else {
-        echo "Successfully logged in $username";
-    }
-
-?>
 
