@@ -8,10 +8,10 @@
     $userAddress = filter_input(INPUT_POST, 'user_Address');
     $zipcode = filter_input(INPUT_POST, 'user_zipcode');
 
-    $queryUsers = "SELECT * FROM user WHERE id=:userId";
+    $queryUsers = "SELECT * FROM user WHERE username=:userName";
 
     $execStatement = $db->prepare($queryUsers);
-    $execStatement->bindValue(':userId', $id);
+    $execStatement->bindValue(':userName', $username);
 
     $execStatement->execute();
 
@@ -32,6 +32,11 @@
         $insertStatement->bindValue(':user_zipcode', $zipcode);
 
         $insertStatement->execute();
+        header("location: sign-up.php?noError");
+        // checkifPwordmatch-55
+    }
+    else{
+        header("location: sign-up.php?error=existingUser");
     }
 
 ?>

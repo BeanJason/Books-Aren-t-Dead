@@ -1,41 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <title>Books Aren't Dead.com</title>
-        <meta charset="utf-8">
-        <script src="js/react.js"></script>
-        <script src="js/react-dom.js"></script>
-        <script src="js/navbar.js"></script>
-        <link rel="stylesheet" type="text/css" href="./Style/main.css" />
-        <link rel="stylesheet" type="text/css" href="./Style/nav-bar.css" />
-    </head>
-    <header>
-        <h1>Books Aren't Dead!</h1>
-        <form id="login" action="login.php" method="post">
-            <label for="userName">username: </label>
-            <input type="text" is="userName" name="userName"><br>
-            <label for="user_Password">password: </label>
-            <input type="password" id="user_Password" name="user_Password"><br>
-            <br>
-            <input type="submit" value="Login">
-            <button type="button" id="sign-up">Sign-up</button> 
-        </form>
-        
-    </header>
-    <body>
-        <div id="logo"></div>
-        <script type = "text/javascript">
-            /* React code */
-            let h1 = React.createElement('h1',null, "Books Aren't Dead!");
-        </script>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="new-releases.html">New Releases</a></li>
-                <li><a href="newsletter.html">Newsletter</a></li>
-                <li><a href="best-sellers.html">Best Sellers</a></li>
-            </ul>
-         </nav>     -->
          <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -44,19 +6,31 @@
          <?php include "./templates/header.html" ?>
          <?php include "./templates/body.html"?>
 
+         <h1>Sign Up</h1>
         <form action="addUser.php" method="post">
             <label for="userId">userId: </label>
-            <input type="text" id="userId" name="userId"><br>
+            <input type="text" id="userId" name="userId" placeholder="shouldn't be here"><br>
             <label for="userName">username: </label>
-            <input type="text" is="userName" name="userName"><br>
+            <input type="text" is="userName" name="userName" placeholder="username"><br>
             <label for="user_Password">password: </label>
-            <input type="password" id="user_Password" name="user_Password"><br>
+            <input type="password" id="user_Password" name="user_Password" placeholder="password"><br>
             <label for="user_Address">address: </label>
-            <input type="text" id="user_Address" name="user_Address"><br>
+            <input type="text" id="user_Address" name="user_Address" placeholder="address"><br>
             <label for="user_zipcode">zipcode: </label>
-            <input type="text" id="user_zipcode" name="user_zipcode"><br>
+            <input type="text" id="user_zipcode" name="user_zipcode" placeholder="zipcode"><br>
             <br>
             <input type="submit" value="submit">
         </form>
+        <?php
+            if(isset($_GET["error"])){
+                if($_GET["error"] == "existingUser"){
+                    echo "<p>Error: user already exists </p>";
+                }
+            }
+            else if(isset($_GET["noError"])){
+                echo "<p>Account created! Welcome!</p>";
+            }
+
+        ?>
     </body>
 </html>
