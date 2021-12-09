@@ -7,9 +7,9 @@
         <script src="js/react.js"></script>
         <script src="js/react-dom.js"></script>
     </head>
-    <?php include "./templates/header.html" ?>
+    <?php include "./templates/header.php" ?>
     <body>
-         <?php include "./templates/body.html"?>
+         <?php include "./templates/body.php"?>
         <div id="logo"> </div>
         <script type = "text/javascript">
             /* React code */

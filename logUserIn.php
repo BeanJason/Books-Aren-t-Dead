@@ -22,8 +22,8 @@
         header("location: login.php?error=notFound");
     }
     else {
-        // session_start();
-        // $_SESSION["username"] = ":username";
+        session_start();
+        $_SESSION["username"] = ":username";
         header("location: login.php?noError");
     }
 

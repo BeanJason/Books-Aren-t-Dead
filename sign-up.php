@@ -4,7 +4,7 @@
 </head>
 <body>
          <?php include "./templates/header.php" ?>
-         <?php include "./templates/body.html"?>
+         <?php include "./templates/body.php"?>
 
          <h1>Sign Up</h1>
         <form action="addUser.php" method="post">

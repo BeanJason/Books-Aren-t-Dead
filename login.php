@@ -4,7 +4,7 @@
 </head>
 <body>
          <?php include "./templates/header.php" ?>
-         <?php include "./templates/body.html"?>
+         <?php include "./templates/body.php"?>
 
          <br>
          <h1>Log in</h1>

@@ -17,7 +17,7 @@
 </header>
 
 <body>
-    <?php include "./templates/body.html" ?>
+    <?php include "./templates/body.php" ?>
 
     <div id="logo"></div>
     <script type="text/javascript">
