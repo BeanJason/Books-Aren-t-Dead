@@ -7,6 +7,7 @@
          <?php include "./templates/header.php" ?>
          <?php include "./templates/body.php"?>
 
+         <br>
          <h1>Newsletter</h1>
          <h3>Holiday Sale!!</h3> <br>
         <p>We will have a sale going on this holiday season, all your favorite classics 25% off till the new year begins.</p><br>
