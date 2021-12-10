@@ -29,11 +29,11 @@ export default function BooksDetail(props) {
 				<div className="prices">
 					<h2>Price</h2>
 					<form>
-						<label for="hardcover">Hardcover Price: ${details.hardcover_price}</label>
+						<label htmlFor="hardcover">Hardcover Price: ${details.hardcover_price}</label>
 						<input type="radio" id="hard_cover" name="price" value={details.hardcover_price}></input><br></br>
-						<label for="paperback">Paperback Price: ${details.paperback_price}</label>
+						<label htmlFor="paperback">Paperback Price: ${details.paperback_price}</label>
 						<input type="radio" id="paperback" name="price" value={details.paperback_price}></input><br></br>
-						<label for="kindle">Kindle Price: ${details.kindle_price}</label>
+						<label htmlFor="kindle">Kindle Price: ${details.kindle_price}</label>
 						<input type="radio" id="kindle" name="price" value={details.kindle_price}></input><br></br>
 						<input type="submit" value="Add to Cart"></input>
 					</form>
