@@ -8,19 +8,21 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Books from './routes/BooksPage'
+import BooksPage from './routes/BooksPage'
+import BooksDetail from './routes/BooksDetail';
 
 ReactDOM.render(
   <BrowserRouter>
     <nav id='topnav'>
       <Link to='/'>App</Link>
-      <Link to='/Books'>Books</Link>
-      <Link to='/Blog'>Blog</Link>
+      <Link to='/books'>Books</Link>
+      <Link to='/blog'>Blog</Link>
     </nav>
     <div id="container">
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/Books" element={<Books />} />
+        <Route path="/books" element={<BooksPage />} />
+        <Route path="/book/:id" element={<BooksDetail />} />
       </Routes>
     </div>
   </BrowserRouter>,

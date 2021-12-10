@@ -34,7 +34,6 @@ export default function BooksPage() {
 				<h1>Genres</h1>
 				<p onClick={() => changeGenre()}>All</p>
 				<p onClick={() => changeGenre("arts")}>Arts and Photos</p>
-				<p onClick={() => changeGenre("business")}>Business</p>
 				<p onClick={() => changeGenre("romance")}>Romance</p>
 				<p onClick={() => changeGenre("law")}>Law</p>
 				<p onClick={() => changeGenre("history")}>History</p>
@@ -45,7 +44,7 @@ export default function BooksPage() {
 
 			<div className="book-gallery">
 				{
-					books.map((book) => <Book imgUrl={book.image_path} title={book.name} author={book.author} rating={book.rating} />)
+					books.map((book) => <Book key={book.isbn} imgUrl={book.image_path} title={book.name} author={book.author} rating={book.rating} />)
 				}
 			</div>
 		</div>
