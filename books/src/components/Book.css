@@ -4,6 +4,10 @@
 	margin-top: 40px;
 }
 
+.book a {
+	margin: 0;
+}
+
 .book-cover, .book-text {
 	max-height: 200px;
 	max-width: 200px;

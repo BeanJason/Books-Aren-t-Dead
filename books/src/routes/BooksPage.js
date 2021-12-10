@@ -44,7 +44,7 @@ export default function BooksPage() {
 
 			<div className="book-gallery">
 				{
-					books.map((book) => <Book key={book.isbn} imgUrl={book.image_path} title={book.name} author={book.author} rating={book.rating} />)
+					books.map((book) => <Book key={book.isbn} isbn={book.isbn} imgUrl={book.image_path} title={book.name} author={book.author} rating={book.rating} />)
 				}
 			</div>
 		</div>
