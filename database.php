@@ -3,7 +3,7 @@ lecture 10 around 1:50:00 -->
 
 <?php
 
-    $dataSourceName = "mysql:host=localhost;dbname=usersdb";
+    $dataSourceName = "mysql:host=localhost;dbname=booksaren'tdeaddb";
     $username= 'admin';
     $password= 'password';
 
