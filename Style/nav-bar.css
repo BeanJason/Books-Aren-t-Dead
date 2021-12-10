@@ -8,6 +8,12 @@ header{
     margin: auto;
 }
 
+.logo{
+  display:block; 
+  width:auto; 
+  text-align:right;
+  margin: auto;
+}
 
 nav {
     clear:both;

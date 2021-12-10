@@ -16,7 +16,7 @@
     </head>
     <header>
         <h1>Books Aren't Dead!</h1>
-       
+        <img class="logo" src="images/pic1.jpg">
         
 
         
