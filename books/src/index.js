@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import {
   BrowserRouter,
   Routes,
@@ -20,7 +19,6 @@ ReactDOM.render(
     </nav>
     <div id="container">
       <Routes>
-        <Route path="/" element={<App />} />
         <Route path="/books" element={<BooksPage />} />
         <Route path="/book/:id" element={<BooksDetail />} />
       </Routes>
