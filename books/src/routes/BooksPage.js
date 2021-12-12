@@ -42,7 +42,7 @@ export default function BooksPage() {
 	return (
 		<div className="books-page">
 			<div className="genre-picker">
-				<h1>Genres</h1>
+				<h2>Genres</h2>
 				<p onClick={() => changeGenre()}>All</p>
 				<p onClick={() => changeGenre("arts")}>Arts and Photos</p>
 				<p onClick={() => changeGenre("romance")}>Romance</p>

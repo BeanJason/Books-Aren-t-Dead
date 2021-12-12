@@ -23,11 +23,11 @@ export default function BooksDetail(props) {
 		<div className="books-detail">
 			<img className="detail-cover" src={details.image_path} alt="book cover" />
 			<div className="detail-content">
-				<h1>{details.name}</h1>
+				<h2>{details.name}</h2>
 				<p>By {details.author}</p>
 				<p>{details.rating}/5 stars</p>
 				<div className="prices">
-					<h2>Price</h2>
+					<h3>Price</h3>
 					<form>
 						<label htmlFor="hardcover">Hardcover Price: ${details.hardcover_price}</label>
 						<input type="radio" id="hard_cover" name="price" value={details.hardcover_price}></input><br></br>
@@ -38,9 +38,9 @@ export default function BooksDetail(props) {
 						<input type="submit" value="Add to Cart"></input>
 					</form>
 				</div>
-				<h2>Overview</h2>
+				<h3>Overview</h3>
 				<p>{details.overview}</p>
-				<h2>Product Details</h2>
+				<h3>Product Details</h3>
 				<p>ISBN: {details.isbn}</p>
 				<p>Publish Date: {details.publish_date}</p>
 				<p>Pages: {details.page_number}</p>
