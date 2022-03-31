@@ -18,9 +18,9 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="new-releases.php">New Releases</a></li>
+                <li><a href="http://localhost:3000/books">New Releases</a></li>
                 <li><a href="newsletter.php">Newsletter</a></li>
-                <li><a href="best-sellers.php">Best Sellers</a></li>
+                <li><a href="http://localhost:3000/books">Best Sellers</a></li>
                 <li><a href="recommend.php">Recommendations</a></li>
 
 

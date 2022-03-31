@@ -28,10 +28,21 @@ export default function BooksPage() {
 			});
 	};
 
+	const getBookGallery = () => {
+		if (books.length > 0) {
+			return books.map(book => <Book key={book.isbn} isbn={book.isbn} imgUrl={book.image_path} title={book.name} author={book.author} rating={book.rating} />)
+		}
+		else {
+			return (
+				<p className="no-books">No books of this genre</p>
+			)
+		}
+	};
+
 	return (
 		<div className="books-page">
 			<div className="genre-picker">
-				<h1>Genres</h1>
+				<h2>Genres</h2>
 				<p onClick={() => changeGenre()}>All</p>
 				<p onClick={() => changeGenre("arts")}>Arts and Photos</p>
 				<p onClick={() => changeGenre("romance")}>Romance</p>
@@ -44,7 +55,7 @@ export default function BooksPage() {
 
 			<div className="book-gallery">
 				{
-					books.map((book) => <Book key={book.isbn} isbn={book.isbn} imgUrl={book.image_path} title={book.name} author={book.author} rating={book.rating} />)
+					getBookGallery()
 				}
 			</div>
 		</div>
